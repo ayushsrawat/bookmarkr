@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from "react";
 import "./styles/Home.css";
 import Panel from "./Panel";
 
-const url: string = "https://raw.githubusercontent.com/drsqrt/library/refs/heads/main/public/resources.json";
+const url: string = "https://raw.githubusercontent.com/drsqrt/library-v0/refs/heads/main/public/resources.json";
 const BASE_PARENT_ID: number = 0;
 
 export type FileType = {
