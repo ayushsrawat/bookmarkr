@@ -2,26 +2,26 @@ import { useEffect, useState, useMemo } from "react";
 import "./styles/Home.css";
 import Panel from "./Panel";
 
-const url: string = "https://raw.githubusercontent.com/drsqrt/library-v0/refs/heads/main/public/resources.json";
-const BASE_PARENT_ID: number = 0;
+const url: string = "https://gist.githubusercontent.com/drsqrt/25062ec55d234974c2b3ea7a02a65b8f/raw/d084191041fc1c4a9702ba4eed6aeabaf080a6e9/chrome_bookmark.json";
+const BASE_PARENT_ID: number = 1;
 
 export type FileType = {
   id: number;
-  name: string;
+  title: string;
   url: string;
-  folderId: number;
+  parentId: number;
 };
 
 export type FolderType = {
   id: number;
-  name: string;
+  title: string;
   parentId: number;
 };
 
 function Home() {
   const [files, setFiles] = useState<FileType[]>([]);
   const [folders, setFolders] = useState<FolderType[]>([]);
-  const [openPanels, setOpenPanels] = useState<number[]>([0]);
+  const [openPanels, setOpenPanels] = useState<number[]>([BASE_PARENT_ID]);
   const [highlightedFolders, setHighlightedFolders] = useState<number[]>([]);
 
   const parentMap = useMemo(
@@ -89,7 +89,7 @@ function Home() {
     <div className="home">
       {openPanels.map((folderId, _) => {
         const currentFolders = folders.filter((f) => f.parentId === folderId);
-        const currentFiles = files.filter((f) => f.folderId === folderId);
+        const currentFiles = files.filter((f) => f.parentId === folderId);
         return (
           <Panel
             key={folderId}
