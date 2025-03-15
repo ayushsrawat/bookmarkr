@@ -2,7 +2,7 @@
   "name": "library",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://drsqrt.github.io/library",
+  "homepage": "https://drsqrt.github.io/library-v0",
   "type": "module",
   "scripts": {
     "dev": "vite --port 6969",
