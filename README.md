@@ -3,5 +3,5 @@
 > However, I realized that this approach was not the most efficient for my needs. 
 > Instead, I have decided to focus on a simpler and faster way to store and manage resource links without an elaborate folder-based UI.
 
-## Library : A minimal Knowledge Nest
+## Bookmarkr : A minimal Knowledge Nest
 
