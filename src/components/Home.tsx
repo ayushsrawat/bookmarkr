@@ -2,7 +2,7 @@ import { useEffect, useState, useMemo } from "react";
 import "./styles/Home.css";
 import Panel from "./Panel";
 
-const url: string = "https://gist.githubusercontent.com/drsqrt/25062ec55d234974c2b3ea7a02a65b8f/raw/d084191041fc1c4a9702ba4eed6aeabaf080a6e9/chrome_bookmark.json";
+const url: string = "https://gist.githubusercontent.com/ayushsrawat/25062ec55d234974c2b3ea7a02a65b8f/raw/d084191041fc1c4a9702ba4eed6aeabaf080a6e9/chrome_bookmark.json";
 const BASE_PARENT_ID: number = 1;
 
 export type FileType = {
